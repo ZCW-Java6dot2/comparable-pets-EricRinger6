@@ -1,6 +1,7 @@
 package io.zipcoder.polymorphism;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Console {
@@ -77,6 +78,15 @@ public class Console {
         print(prompt);
         Integer userInput = scanner.nextInt();
         return userInput;
+    }
+
+    public Integer comparePets(Pet p1, Pet p2){
+        return p1.getName().compareTo(p2.getName());
+    }
+
+    public ArrayList<Pet> sortList(ArrayList<Pet> petList){
+        Collections.sort(petList, java.util.Comparator.comparing(Pet::getName));
+        return petList;
     }
 
 }

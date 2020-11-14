@@ -28,5 +28,16 @@ public class ConsoleTest {
 
     }
 
+    @Test
+    public void testCompare(){
+        Cat cat = new Cat("Mochi", "Meow");
+        Dog dog = new Dog("Roxy", "Bark");
+        Console console = new Console();
 
+        Integer expected = console.comparePets(cat, dog);
+        Integer actual = -5;
+
+        Assert.assertEquals(actual, expected);
+    }
+    
 }
